@@ -57,7 +57,7 @@ FirstLevelFunction<T, R> Y(SecondLevelFunction<T, R> function2)
 
 		ThirdLevelFunction<T, R> recursiveInner = [function2](const ThirdLevelFunctionSelf<T, R> self)->FirstLevelFunction < T, R >
 		{
-			return[self, function2](int number)
+			return[self, function2](T number)
 			{
 				return function2(self(self)) (number);
 			};
@@ -85,7 +85,7 @@ FirstLevelFunction<T, R> Memoize(std::shared_ptr<FirstLevelFunction<T, R>> input
 		}
 		else
 		{
-			cout << "Cached value for key: " << arg <<endl;
+			cout << "Cached value for key: " << arg << endl;
 			return  (*cachedIterator).second;
 		}
 	};
@@ -97,7 +97,7 @@ std::shared_ptr<FirstLevelFunction<T, R>> MemoFix(SecondLevelFunction<T, R> func
 {
 	auto g = std::make_shared<FirstLevelFunction<T, R>>();
 	auto h = std::make_shared<FirstLevelFunction<T, R>>();
-	auto e = std::make_shared<FirstLevelFunction<T, R>>();
+
 	*g = [function2, h, g](T arg) -> R {
 
 		return function2(*h) (arg);
