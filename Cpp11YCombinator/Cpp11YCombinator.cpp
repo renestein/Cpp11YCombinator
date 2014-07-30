@@ -8,17 +8,21 @@
 using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
-	for (int i = 0; i < 20; i++)
+
+	auto fibonacciF = FibonacciFunction();
+	for (int i = 0; i < 30; i++)
 	{
-		cout << Fibonacci(i) << endl;
+		auto fibonacciValue = fibonacciF(i);
+		cout << i << ": Fibonacci - " << fibonacciValue << endl;
 		
 	}
 
 	cout << "Factorial";
 
+	auto factorialF = FactorialFunction();
 	for (int i = 0; i < 15; i++)
 	{
-		cout << Factorial(i) << endl;
+		cout << factorialF(i) << endl;
 
 	}
 
