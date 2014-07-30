@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "Fibonacci.h"
+#include "Function.h"
 #include <iostream>
 
 using namespace std;
