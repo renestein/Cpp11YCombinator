@@ -13,6 +13,15 @@ int _tmain(int argc, _TCHAR* argv[])
 		cout << Fibonacci(i) << endl;
 		
 	}
+
+	cout << "Factorial";
+
+	for (int i = 0; i < 15; i++)
+	{
+		cout << Factorial(i) << endl;
+
+	}
+
 	cin.get();
 	return 0;
 }
