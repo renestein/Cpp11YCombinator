@@ -2,10 +2,18 @@
 //
 
 #include "stdafx.h"
+#include "Fibonacci.h"
+#include <iostream>
 
-
+using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
+	for (int i = 0; i < 20; i++)
+	{
+		cout << Fibonacci(i) << endl;
+		
+	}
+	cin.get();
 	return 0;
 }
 
