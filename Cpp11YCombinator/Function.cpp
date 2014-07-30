@@ -127,7 +127,7 @@ FirstLevelFunction<int, int> FibonacciFunction()
 	return memoizedFibonacci;
 
 
-};
+}
 
 FirstLevelFunction<int, int> FactorialFunction()
 {
@@ -146,5 +146,5 @@ FirstLevelFunction<int, int> FactorialFunction()
 	return Y<int, int>(factorialOuter);
 
 
-};
+}
 
