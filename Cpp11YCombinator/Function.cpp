@@ -74,7 +74,7 @@ template<class T, class R>
 FirstLevelFunction<T, R> Memoize(std::shared_ptr<FirstLevelFunction<T, R>> inputFunction)
 {
 	auto dictionary = std::make_shared<unordered_map<T, R>>();
-	return[dictionary, inputFunction](const T arg)->T
+	return[dictionary, inputFunction](const T arg)->R
 	{
 		auto cachedIterator = dictionary->find(arg);
 		if (cachedIterator == dictionary->end())
