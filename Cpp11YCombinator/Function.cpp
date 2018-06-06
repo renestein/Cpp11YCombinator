@@ -47,6 +47,7 @@ public:
 
 private:
 	ThirdLevelFunction<T, R> m_function;
+
 };
 
 template<class T, class R>
